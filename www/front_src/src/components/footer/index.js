@@ -26,7 +26,7 @@ class Footer extends Component {
             </ul>
           </div>
           <div class="footer-wrap-right">
-            <span>Copyright &copy; 2005 - 2019</span>
+            <span>Copyright &copy; 2005 - 2020</span>
           </div>
         </div>
       </footer>
