@@ -42,8 +42,11 @@ if (!isset($centreon)) {
     exit();
 }
 
-// getting the garbage collector value set
-define("SESSION_DURATION_LIMIT", (int)(ini_get('session.gc_maxlifetime') / 60));
+// getting the garbage collector value
+$garbageCollectorTime = (ini_get('session.gc_maxlifetime') / 60) > 120
+    ? (ini_get('session.gc_maxlifetime') / 60)
+    : 120;
+define("SESSION_DURATION_LIMIT", $garbageCollectorTime);
 
 $transcoKey = array(
     "enable_autologin" => "yes",
